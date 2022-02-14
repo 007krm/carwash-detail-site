@@ -15,7 +15,7 @@ body {
     background-color: black;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 
@@ -67,6 +67,10 @@ body {
   }
 
   .h4-tag-color {
+      color: #5ddcff;
+  }
+
+  .p-tag-color{
       color: #5ddcff;
   }
 
