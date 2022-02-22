@@ -1,5 +1,6 @@
 body {
     margin: 0%;
+    /* background-image: url("../images/fog.jpg"); */
     background-color: black;
     display: flex;
     align-items: center;
@@ -8,8 +9,10 @@ body {
 
 .header {
   width: 100%;
+  /* position: fixed;
+  top: 0; */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: rgb(87, 86, 86);
+  background-color: rgb(48, 48, 48);
   color: #ffffff;
 }
 .header h1 {
@@ -61,12 +64,37 @@ a:hover{
 .hero {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  height: 800px;
+  height: 700px;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 65px;
   background-image: url("../images/car-photo.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.rear-photo {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 500px;
+  width: 100%;
+  margin-top: 65px;
+  margin-bottom: 65px;
+  background-image: url("../images/rear-car.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.washing-car-photo {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 500px;
+  width: 100%;
+  margin-top: 65px;
+  background-image: url("../images/washing-car.jpg");
+  background-size: cover;
+  background-position: center;
+
 }
 
 
@@ -102,9 +130,64 @@ a:hover{
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
     font-family: cursive;
-    --card-height: 45vh;
+    
+    --card-height: 55vh;
     --card-width: calc(var(--card-height) / 1.5);
   }
+ /* Contact Card */
+  .card-contact-info {
+    margin: 30px;
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    text-align: center;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+    
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.2);
+  }
+
+  .card-contact-info::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+
+  .card-contact-info::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+
+
 
   .h2-tag-color {
       color: #5ddcff;
