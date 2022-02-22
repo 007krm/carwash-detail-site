@@ -23,19 +23,21 @@ header {
     inherits: false;
   }
   
+
+  .card-container{
+    display: flex;
+    flex-direction: row;
+  }
   
   .card {
+    margin: 30px;
     background: #191c29;
     width: var(--card-width);
     height: var(--card-height);
     padding: 3px;
     position: relative;
     border-radius: 6px;
-    /* justify-content: center;
-    align-items: center; */
     text-align: center;
-    /* display: flex; */
-    /* font-size: 1.5em; */
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
     font-family: cursive;
@@ -55,16 +57,19 @@ header {
       color: #5ddcff;
   }
 
-  /* .card:hover {
+
+/* will turn off color effect when pointer over card */
+  .card:hover {
     color: rgb(88 199 250 / 100%);
     transition: color 1s;
   }
   .card:hover:before, .card:hover:after {
     animation: none;
     opacity: 0;
-  }  */
+  } 
    
   
+  /* color effect on cards */
   .card::before {
     content: "";
     width: 104%;
@@ -79,8 +84,7 @@ header {
       left: -2%;
       animation: spin 2.5s linear infinite;
   }
-  
-  .card::after {
+    .card::after {
     position: absolute;
     content: "";
     top: calc(var(--card-height) / 6);
