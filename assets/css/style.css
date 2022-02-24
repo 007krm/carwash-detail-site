@@ -1,9 +1,9 @@
 body {
     margin: 0%;
     /* background-image: url("../images/fog.jpg"); */
-    background: linear-gradient(-45deg, #15756d, #16779e, rgb(2, 118, 122), rgb(4, 79, 129));
+    background: linear-gradient(-45deg, #15756d, #000000, rgb(2, 118, 122), rgb(0, 0, 0));
     background-size: 300% 300%;
-	  animation: gradient 13s ease infinite;
+	  animation: gradient 9s ease infinite;
     /* background-color: black; */
     display: flex;
     align-items: center;
@@ -273,5 +273,10 @@ a:hover{
     100% {
       --rotate: 360deg;
     }
+  }
+
+  footer{
+    color: white;
+    font-size: 12px;
   }
  
