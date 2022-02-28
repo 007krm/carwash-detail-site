@@ -22,9 +22,45 @@ body {
 	}
 }
 
+.fa-brands {
+  font-size: 35px;
+}
+
+.fa-facebook {
+position: relative;
+left: 250px;
+}
+
+.fa-facebook:hover {
+ color: black;
+
+}
+
+.fa-instagram {
+  position: relative;
+  left: 280px;
+}
+
+.fa-instagram:hover {
+ color: black;
+
+}
+
+.fa-tiktok {
+  position: relative;
+  left: 310px;
+}
+
+.fa-tiktok:hover {
+  color: black;
+  
+
+}
+
 
 .header {
   width: 100%;
+  margin-left: 20px;
   /* position: fixed;
   top: 0; */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
