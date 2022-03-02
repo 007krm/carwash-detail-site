@@ -232,9 +232,25 @@ a:hover {
 .h4-tag-color {
   margin-top: -7%;
   margin-bottom: -4%;
+  /* color: white; */
+  color: rgb(255, 0, 0);
+  font-size: 25px;
+}
+
+.mini-detail {
+  margin-top: -7%;
+  margin-bottom: -4%;
   color: white;
   font-size: 25px;
 }
+
+.golden-detail{ 
+    margin-top: -7%;
+    margin-bottom: -4%;
+    /* color: white; */
+    color: goldenrod;
+    font-size: 25px;
+  }
 
 .p-tag-color {
   color: white;
