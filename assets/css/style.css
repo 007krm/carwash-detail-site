@@ -242,6 +242,22 @@ a:hover {
   padding-right: 9px;
 }
 
+/* contact info code */
+.contact-title {
+  margin-top: 12%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 45px;
+}
+
+.contact-p-tag {
+  margin-top: -9%;
+  margin-bottom: -7%;
+  color: white;
+  font-size: 25px;
+}
+
 /* will turn off color effect when pointer over card */
 .card:hover {
   color: rgb(88 199 250 / 100%);
