@@ -30,6 +30,10 @@ body {
 }
 
 /* Font Awesome Code */
+.fa-solid{
+  color: white;
+}
+
 .fa-brands {
   font-size: 35px;
   /* margin: 50px; */
