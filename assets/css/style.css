@@ -1,162 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
 body {
-  margin: 0%;
-  /* background-image: url("../images/fog.jpg"); */
-  background: linear-gradient(
-    -45deg,
-    /* background color changer */
-    /* #15756d,
-    #000000,
-    rgb(2, 118, 122),
-    rgb(0, 0, 0) */
-  );
-  background-size: 300% 300%;
-  animation: gradient 9s ease infinite;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Font Awesome Code */
-.fa-solid{
-  color: white;
-}
-
-.fa-brands {
-  font-size: 35px;
-  /* margin: 50px; */
-  color: rgb(255, 0, 0);
-}
-
-.fa-brands:hover{
-  color: white;
-}
-
-
-/* Header */
-.header {
-  width: 100%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  background-color: black;
+  
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>START nav bar designing*/
+nav {
+  padding: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+.logo {
+  align-self: center;
+  font-family: "Passion One", "sans-serif";
+  font-size: 2.8rem;
+  color: white;
+  margin: 0;
+  z-index: 3;
+}
+span {
+  color: rgb(255, 0, 0);
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.nav-menu {
+  /*nav menu hidden for mobile*/
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+  top: -1000%;
+  left: 0;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  width: 100%;
+  height: auto;
+  background-color: rgb(43, 43, 43);
+  z-index: 2;
+  transition: all 0.55s ease-in-out;
+}
+.nav-menu.active {
+  top: 70px;
+}
+.nav-item {
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+.nav-menu a {
+  color: #fff;
+  font-weight: 550;
+  font-size: 1.2rem;
+}
+.nav-menu a:hover {
   color: rgb(255, 0, 0);
 }
-
-.header h1 {
-  display: inline-block;
-  font-size: 48px;
-  text-decoration-line: underline;
+.hamburger {
+  /*hamburger menu*/
+  cursor: pointer;
+  z-index: 3;
 }
-
-.header div {
-  padding-top: 15px;
-  margin-right: 20px;
-  float: right;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
-.header div ul {
-  list-style-type: none;
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
 }
-
-.header div ul li {
-  display: inline-block;
-  padding-right: 15px;
-  margin-right: 35px;
-  margin-top: 20px;
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
-
-.header h1 .logo {
-  color: #ffffff;
-  text-decoration-line: underline;
-}
-
-a {
-  text-decoration: none;
-  font-size: 20px;
-}
-
-a {
-  color: #ff0000;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-weight: bold;
-  margin-top: 2rem;
-}
-
-a:hover {
-  color: white;
-  text-decoration: none;
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Image */
-.hero {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  height: 700px;
+.car-images {
   width: 100%;
-  margin-bottom: 65px;
-  background-image: url("../images/car-photo.jpg");
-  background-size: cover;
-  background-position: center;
+  max-width: 600px;
+  height: auto;
+  padding-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Image */
-.rear-photo {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  height: 500px;
-  width: 100%;
-  margin-top: 65px;
-  margin-bottom: 65px;
-  background-image: url("../images/rear-car.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-/* Image */
-.washing-car-photo {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  height: 500px;
-  width: 100%;
-  margin-top: 65px;
-  background-image: url("../images/washing-car.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
+.flex-container {
+  display: flex;
+  justify-content: center;
+  
 }
 
 /* Cards */
-.card-container {
-  display: flex;
-  flex-direction: row;
-}
+
 
 .card {
-  margin: 35px;
+  margin: 25px;
+  padding: 25px;
   background: #191c29;
   width: var(--card-width);
   height: var(--card-height);
-  padding: 3px;
-  position: relative;
   border-radius: 6px;
   text-align: center;
   color: rgba(115, 250, 88, 0);
@@ -166,79 +129,11 @@ a:hover {
   --card-width: calc(var(--card-height) / 1.5);
 }
 
-/* Contact Card */
-.card-contact-info {
-  margin: 30px;
-  background: #191c29;
-  width: var(--card-width);
-  height: var(--card-height);
-  padding: 3px;
-  position: relative;
-  border-radius: 6px;
-  text-align: center;
-  color: rgb(88 199 250 / 0%);
-  cursor: pointer;
-  font-family: cursive;
-  --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1.2);
-}
-
-.card-contact-info::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate),
-    /* #5ddcff,
-    #3c67e3 43%,
-    #4e00c2 */
-    #ff0000,
-    #9e0000 43%,
-    #3b0000
-  );
-  position: absolute;
-  z-index: -1;
-  top: -1%;
-  left: -2%;
-  animation: spin 2.5s linear infinite;
-}
-
-.card-contact-info::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate),
-    #ff0000,
-    #9e0000 43%,
-    #3b0000
-  );
-  opacity: 1;
-  transition: opacity 0.5s;
-  animation: spin 2.5s linear infinite;
-}
 
 .h2-tag-color {
   margin-top: 1%;
   color: white;
   font-size: 35px;
-}
-
-.h4-tag-color {
-  margin-top: -7%;
-  margin-bottom: -4%;
-  /* color: white; */
-  color: rgb(255, 0, 0);
-  font-size: 25px;
 }
 
 .mini-detail {
@@ -248,19 +143,13 @@ a:hover {
   font-size: 25px;
 }
 
-.golden-detail{ 
-    margin-top: -7%;
-    margin-bottom: -4%;
-    /* color: white; */
-    color: goldenrod;
-    font-size: 25px;
-  }
 
 .p-tag-color {
   color: white;
   padding-left: 9px;
   padding-right: 9px;
 }
+
 
 /* contact info code */
 .contact-title {
@@ -278,67 +167,24 @@ a:hover {
   font-size: 25px;
 }
 
-/* will turn off color effect when pointer over card */
-.card:hover {
-  color: rgb(88 199 250 / 100%);
-  transition: color 1s;
-}
-.card:hover:before,
-.card:hover:after {
-  animation: none;
-  opacity: 0;
+
+/* Contact Card */
+.card-contact-info {
+  margin: 30px;
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  font-family: cursive;
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.2);
 }
 
-/* color effect on cards */
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate),
-    #ff0000,
-    #9e0000 43%,
-    #3b0000
-  );
-  position: absolute;
-  z-index: -1;
-  top: -1%;
-  left: -2%;
-  animation: spin 2.5s linear infinite;
-}
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate),
-    #ff0000,
-    #9e0000 43%,
-    #3b0000
-  );
-  opacity: 1;
-  transition: opacity 0.5s;
-  animation: spin 2.5s linear infinite;
-}
 
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
-}
-
+/* Social Media Code */
 .container-social-media {
   margin-top: 65px;
   margin-bottom: 10px;
@@ -357,7 +203,26 @@ a:hover {
   margin-top: 90px;
 }
 
-footer {
+
+/* Font Awesome Code */
+.fa-solid{
   color: white;
-  font-size: 8px;
+  padding: 5px;
+}
+
+.fa-brands {
+  font-size: 35px;
+  /* margin: 50px; */
+  color: rgb(255, 0, 0);
+}
+
+.fa-brands:hover{
+  color: white;
+}
+
+
+@media only screen and (max-width: 600px) {
+.flex-container {
+
+  }
 }
