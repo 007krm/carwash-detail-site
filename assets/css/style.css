@@ -137,8 +137,6 @@ span {
 }
 
 .mini-detail {
-  margin-top: -7%;
-  margin-bottom: -4%;
   color: white;
   font-size: 25px;
 }
@@ -213,7 +211,6 @@ span {
 
 .fa-brands {
   font-size: 35px;
-  /* margin: 50px; */
   color: rgb(255, 0, 0);
 }
 
