@@ -15,7 +15,7 @@ body {
 }
 
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>START nav bar designing*/
+/*START nav bar designing*/
 nav {
   padding: 20px;
   background-color: black;
@@ -124,7 +124,6 @@ span {
   text-align: center;
   color: rgba(115, 250, 88, 0);
   cursor: pointer;
-  font-family: cursive;
   --card-height: 65vh;
   --card-width: calc(var(--card-height) / 1.5);
 }
@@ -156,14 +155,12 @@ span {
   display: flex;
   justify-content: center;
   color: white;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .contact-p-tag {
-  margin-top: 30px;
-  margin-bottom: -9%;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
@@ -177,7 +174,6 @@ span {
   border-radius: 6px;
   text-align: center;
   cursor: pointer;
-  font-family: cursive;
   --card-height: 65vh;
   --card-width: calc(var(--card-height) / 1.2);
 }
